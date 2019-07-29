@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+
+    <br>
+    {% if messages %}
+    {% for message in  messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <br>
+
+{% for Posts in Post %}
+<!--<h4>username</h4> :{{ Posts.username }}-->
+
+<!--<h4>name</h4> : {{ Posts.name }}-->
+<!--<br>-->
+    {{ Posts.author | title }}<br>
+    {{ Posts.title }}<br>
+    {{ Posts.content }}
+
+<br>
+<br>
+{% endfor %}
+
+
+{% endblock content %}
+
+
