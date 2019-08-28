@@ -13,13 +13,15 @@
     <br>
 
 {% for Posts in Post %}
-<!--<h4>username</h4> :{{ Posts.username }}-->
+<div  style="border-radius:25px;border: 2px solid black;" align="center" >
+    <h1>{{ Posts.author | title }}</h1>
+    <hr>
+    {{ Posts.title }}
+    <br>
+    <p>{{ Posts.content }}</p>
 
-<!--<h4>name</h4> : {{ Posts.name }}-->
-<!--<br>-->
-    {{ Posts.author | title }}<br>
-    {{ Posts.title }}<br>
-    {{ Posts.content }}
+</div>
+
 
 <br>
 <br>
